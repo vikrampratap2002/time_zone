@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="style.css">
+  <title>TimeZone API</title>
+</head>
+<body>
+
+  <h1>TimeZone API</h1>
+  <h2>Your Current Time Zone</h2>
+
+  <!-- Current timezone box -->
+  <div class="info-box" id="current-box">
+    <div class="loading-text" id="current-loading">Detecting your location…</div>
+
+    <div id="current-data" style="display:none;">
+      <div class="info-row">
+        <span class="field-label">Name Of Time Zone :</span>
+        <span class="field-value" id="c-name"></span>
+      </div>
+      <div class="info-row-latlong">
+        <div class="lat-part">
+          <span>Lat:</span>
+          <span class="field-value" id="c-lat"></span>
+        </div>
+        <div class="lon-part">
+          <span>Long:</span>
+          <span class="field-value" id="c-lon"></span>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="field-label">Offset STD:</span>
+        <span class="field-value" id="c-offset-std"></span>
+      </div>
+      <div class="info-row">
+        <span class="field-label">Offset STD Seconds :</span>
+        <span class="field-value" id="c-offset-std-sec"></span>
+      </div>
+      <div class="info-row">
+        <span class="field-label">Offset DST :</span>
+        <span class="field-value" id="c-offset-dst"></span>
+      </div>
+      <div class="info-row">
+        <span class="field-label">Offset DST Seconds:</span>
+        <span class="field-value" id="c-offset-dst-sec"></span>
+      </div>
+      <div class="info-row">
+        <span class="field-label">Country:</span>
+        <span class="field-value" id="c-country"></span>
+      </div>
+      <div class="info-row">
+        <span class="field-label">Postcode:</span>
+        <span class="field-value" id="c-postcode"></span>
+      </div>
+      <div class="info-row">
+        <span class="field-label">City:</span>
+        <span class="field-value" id="c-city"></span>
+      </div>
+    </div>
+
+    <div id="current-error" style="display:none; color:#ff4444; font-size:0.82rem;"></div>
+  </div>
+
+  <!-- Address section -->
+  <h2>Enter Address</h2>
+  <input type="text" id="address-input" placeholder="Name :"/>
+  <button id="search-btn" onclick="searchAddress()">Search</button>
+  <div class="error-msg" id="addr-error">Please enter a valid address !</div>
+
+  <!-- Result section (shown only after valid search) -->
+  <div class="result-section" id="result-section">
+    <h3>Your result</h3>
+    <div class="info-box">
+      <div id="result-data">
+        <div class="info-row">
+          <span class="field-label">Name Of Time Zone :</span>
+          <span class="field-value" id="r-name"></span>
+        </div>
+        <div class="info-row-latlong">
+          <div class="lat-part">
+            <span>Lat:</span>
+            <span class="field-value" id="r-lat"></span>
+          </div>
+          <div class="lon-part">
+            <span>Long:</span>
+            <span class="field-value" id="r-lon"></span>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="field-label">Offset STD:</span>
+          <span class="field-value" id="r-offset-std"></span>
+        </div>
+        <div class="info-row">
+          <span class="field-label">Offset STD Seconds :</span>
+          <span class="field-value" id="r-offset-std-sec"></span>
+        </div>
+        <div class="info-row">
+          <span class="field-label">Offset DST :</span>
+          <span class="field-value" id="r-offset-dst"></span>
+        </div>
+        <div class="info-row">
+          <span class="field-label">Offset DST Seconds:</span>
+          <span class="field-value" id="r-offset-dst-sec"></span>
+        </div>
+        <div class="info-row">
+          <span class="field-label">Country:</span>
+          <span class="field-value" id="r-country"></span>
+        </div>
+        <div class="info-row">
+          <span class="field-label">Postcode:</span>
+          <span class="field-value" id="r-postcode"></span>
+        </div>
+        <div class="info-row">
+          <span class="field-label">City:</span>
+          <span class="field-value" id="r-city"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

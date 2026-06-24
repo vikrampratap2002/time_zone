@@ -1,0 +1,127 @@
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #1a1a1a;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      padding: 30px 20px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    /* ── Info Box (white bordered table-like box) ── */
+    .info-box {
+      border: 1px solid #ffffff;
+      padding: 12px 14px;
+      margin-bottom: 24px;
+      background: transparent;
+      min-height: 140px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 5px;
+      font-size: 0.82rem;
+      color: #dddddd;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .info-row .field-label {
+      min-width: 130px;
+      color: #dddddd;
+    }
+
+    .info-row .field-value {
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    /* Lat/Long on same row */
+    .info-row-latlong {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 5px;
+      font-size: 0.82rem;
+      color: #dddddd;
+      gap: 16px;
+    }
+    .info-row-latlong .lat-part,
+    .info-row-latlong .lon-part {
+      display: flex;
+      gap: 4px;
+    }
+
+    /* ── Address Section ── */
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 6px 8px;
+      background: #2a2a2a;
+      border: 1px solid #555;
+      color: #ffffff;
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+      outline: none;
+    }
+    input[type="text"]:focus { border-color: #888; }
+
+    button {
+      padding: 5px 18px;
+      background: #3a3a3a;
+      border: 1px solid #666;
+      color: #ffffff;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+    button:hover { background: #4a4a4a; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* ── Error message ── */
+    .error-msg {
+      color: #ff4444;
+      font-size: 0.82rem;
+      margin-top: 6px;
+      display: none;
+    }
+
+    /* ── Your Result section ── */
+    .result-section {
+      display: none;
+      margin-top: 20px;
+    }
+
+    /* ── Loading ── */
+    .loading-text {
+      color: #aaaaaa;
+      font-size: 0.82rem;
+      font-style: italic;
+    }
+  
